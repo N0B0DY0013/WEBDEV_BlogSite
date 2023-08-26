@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<H1>Compose</H1>
+
+<form method="POST" action="/compose">
+    
+    <div class="form-group">
+        <label for="lblTitle" class="form-label">Title</label>
+        <input type="text" class="form-control" id="lblTitle" name="journal_title" placeholder="Title" autocomplete="off">
+
+        <label for="txtJournal" class="form-label">Post</label>
+        <textarea class="form-control" id="txtJournal" rows="5" cols="30" name="journal_text" placeholder="What's on your mind ..." autocomplete="off"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit" style="margin-top:10px">Publish</button>
+    
+</form>
+
+<%- include("partials/footer") -%>

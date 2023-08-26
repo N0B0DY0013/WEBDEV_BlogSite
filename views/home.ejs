@@ -1,0 +1,16 @@
+
+<%- include("partials/header") -%>
+
+<H1>Home</H1>
+
+<p> <%= home_content %> </p>
+
+<% journal_content.forEach(function(content) { %>
+    <H1> <%= content.title.substring(0, 100).concat(content.title.length > 100 ? "...":"") %> </H1>
+    <p> <%= content.post.substring(0, 100).concat(content.post.length > 100 ? "..." : "")  %>   
+        <a href= <%= "/posts/".concat(content._id) %> "> Read </a>
+    </p>
+<% }) %>
+
+
+<%- include("partials/footer") -%>
